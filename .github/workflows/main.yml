@@ -28,7 +28,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: setup
         run: |
-          docker build docker-react -f Dockerfile.dev .
+          docker build -t docker-react -f Dockerfile.dev .
           docker run -e CI=true docker-react npm run test
 
       # Runs a set of commands using the runners shell
